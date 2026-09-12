@@ -1,0 +1,9 @@
+.hero h1.stroke-h1{margin:20px 0 10px;font-size:0!important;letter-spacing:0;line-height:1;text-align:center}
+.stroke-text{display:block;width:100%;text-align:center}
+.stroke-text__svg{display:block;width:100%;height:auto;max-width:900px;margin:0 auto;filter:drop-shadow(0 0 26px rgba(255,26,26,.30)) drop-shadow(0 0 3px rgba(255,102,102,.5))}
+.stroke-text__stroke,.stroke-text__fill{user-select:none}
+@keyframes hs-stroke{from{stroke-dashoffset:900}to{stroke-dashoffset:0}}
+@keyframes hs-wipe{from{width:0}to{width:760}}
+@media(prefers-reduced-motion:reduce){.stroke-text__svg{filter:none}}
+.avatar{display:grid;place-items:center}
+.avatar .stroke-text__svg{max-width:128px;height:auto;filter:drop-shadow(0 0 14px rgba(255,26,26,.4))}

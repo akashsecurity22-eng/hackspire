@@ -1,0 +1,18 @@
+{
+  "name": "hackspire",
+  "version": "1.0.0",
+  "description": "HackSpire — Cybersecurity Community Platform. Learn. Build. Hack. Grow.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@supabase/supabase-js": "^2.116.0"
+  }
+}

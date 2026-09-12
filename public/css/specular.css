@@ -1,0 +1,5 @@
+.specular-button{position:relative;isolation:isolate;overflow:hidden;border:1px solid rgba(255,255,255,.38)!important;background:linear-gradient(135deg,#ff3030,#a40000 70%)!important;box-shadow:0 0 18px rgba(255,26,26,.45),inset 0 1px 0 rgba(255,255,255,.55)!important;transition:transform .18s ease,filter .18s ease,box-shadow .18s ease!important}
+.specular-button:before{content:"";position:absolute;inset:-100% -25%;z-index:-1;background:linear-gradient(105deg,transparent 40%,rgba(255,255,255,.75) 48%,rgba(255,255,255,.12) 53%,transparent 61%);transform:translateX(var(--specular-x,-70%));transition:transform .45s ease;pointer-events:none}
+.specular-button:hover{filter:brightness(1.18);transform:translateY(-2px)!important;box-shadow:0 0 28px rgba(255,26,26,.75),inset 0 1px 0 rgba(255,255,255,.7)!important}
+.specular-button:hover:before{transform:translateX(70%)}
+.specular-button:active{transform:scale(.98)!important}

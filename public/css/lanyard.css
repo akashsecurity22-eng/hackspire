@@ -1,0 +1,12 @@
+.lanyard-scene{--lanyard-scale:1;position:fixed;z-index:20;top:10px;left:calc(50% + 330px);width:190px;height:285px;pointer-events:auto;touch-action:none;transform-origin:50% 0;will-change:transform;animation:lanyard-sway 5s ease-in-out infinite}
+.lanyard-scene.is-dragging{animation:none;cursor:grabbing}
+.lanyard-rope{position:absolute;inset:-28px 0 0;width:100%;height:180px;overflow:visible;pointer-events:none;z-index:0}
+.lanyard-rope path{fill:none;stroke:#ff3030;stroke-width:5;stroke-linecap:round;filter:drop-shadow(0 0 7px rgba(255,26,26,.8))}
+.lanyard-band{display:none}
+.lanyard-clip{position:absolute;top:98px;left:88px;width:14px;height:28px;border:3px solid #fff;border-radius:7px;box-shadow:0 0 10px rgba(255,255,255,.7)}
+.lanyard-card{position:absolute;top:124px;left:8px;width:174px;height:128px;border:1px solid rgba(255,48,48,.7);border-radius:12px;background:rgba(5,5,5,.78);box-shadow:0 0 28px rgba(255,26,26,.38),inset 0 0 18px rgba(255,26,26,.12);overflow:hidden;transform:rotate(4deg);backdrop-filter:blur(4px);z-index:2;cursor:grab;user-select:none}
+.lanyard-card img{display:block;width:100%;height:100%;object-fit:contain;padding:8px}
+@keyframes lanyard-sway{0%,100%{transform:rotate(-3deg) translateY(0) scale(var(--lanyard-scale))}50%{transform:rotate(4deg) translateY(8px) scale(var(--lanyard-scale))}}
+@media(max-width:900px){.lanyard-scene{left:auto;right:14px;--lanyard-scale:.75;transform-origin:top right}}
+@media(max-width:540px){.lanyard-scene{top:4px;right:2px;--lanyard-scale:.48;opacity:.75}}
+@media(prefers-reduced-motion:reduce){.lanyard-scene{animation:none}}

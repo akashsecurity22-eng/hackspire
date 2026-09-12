@@ -1,0 +1,2 @@
+.orb-bg{position:fixed;inset:0;z-index:0;overflow:hidden;pointer-events:auto;background:radial-gradient(circle at 50% 48%,#3b050b 0%,#100205 42%,#020202 100%)}
+.orb-canvas{display:block;width:100%;height:100%;opacity:1;filter:contrast(1.35) brightness(1.3);mix-blend-mode:screen}

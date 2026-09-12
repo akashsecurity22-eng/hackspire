@@ -1,0 +1,4 @@
+.glare-hover{position:relative;overflow:hidden;cursor:pointer}
+.glare-hover::before{content:'';position:absolute;inset:0;pointer-events:none;background:linear-gradient(var(--gh-angle,-30deg),hsla(0,0%,0%,0) 60%,var(--gh-rgba,rgba(255,26,26,.28)) 70%,hsla(0,0%,0%,0),hsla(0,0%,0%,0) 100%);background-size:var(--gh-size,250%) var(--gh-size,250%);background-repeat:no-repeat;background-position:-100% -100%;transition:var(--gh-duration,800ms) ease}
+.glare-hover:hover::before{background-position:100% 100%}
+.avatar.glare-hover{border-radius:18px;border:1px solid var(--red);background:radial-gradient(circle at 30% 20%,#3b0000,#0b0b0b)}

@@ -1,0 +1,15 @@
+.hyperspeed-bg{position:fixed;inset:0;z-index:0;overflow:hidden;pointer-events:none;background:radial-gradient(ellipse at center,#2b0508 0%,#090305 42%,#020202 100%);perspective:620px}
+.hyperspeed-canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
+.hyperspeed-bg:before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at center,transparent 22%,rgba(0,0,0,.2) 58%,rgba(0,0,0,.72) 100%);z-index:4}
+.hyperspeed-stars{position:absolute;inset:-20%;background-image:radial-gradient(circle,#fff 0 1px,transparent 1.5px),radial-gradient(circle,#ff3030 0 1px,transparent 1.5px);background-size:97px 113px,157px 131px;opacity:.3;animation:hyperspeed-drift 2.2s linear infinite}
+.hyperspeed-road{position:absolute;left:calc(50% + var(--mouse-x,0px));top:calc(35% + var(--mouse-y,0px));width:150%;height:120%;transform:translateX(-50%) rotateX(67deg);transform-origin:50% 0;background:repeating-linear-gradient(90deg,transparent 0 7%,rgba(255,255,255,.9) 7.15% 7.35%,transparent 7.5% 14%);mask-image:linear-gradient(to bottom,transparent 0%,#000 18%,#000 100%);animation:hyperspeed-road 1.1s linear infinite}
+.hyperspeed-road:before,.hyperspeed-road:after{content:"";position:absolute;top:0;bottom:0;width:2px;background:#fff;box-shadow:0 0 14px 3px #ff1a1a}
+.hyperspeed-road:before{left:21%}.hyperspeed-road:after{right:21%}
+.hyperspeed-road i{position:absolute;top:0;bottom:0;width:1px;background:rgba(255,48,48,.7);left:calc(18% + var(--lane,0%));box-shadow:0 0 8px #ff1a1a}.hyperspeed-road i:nth-child(2){--lane:10%}.hyperspeed-road i:nth-child(3){--lane:20%}.hyperspeed-road i:nth-child(4){--lane:30%}.hyperspeed-road i:nth-child(5){--lane:40%}.hyperspeed-road i:nth-child(6){--lane:50%}.hyperspeed-road i:nth-child(7){--lane:60%}
+.hyperspeed-lights{position:absolute;top:30%;width:38%;height:65%;background:repeating-linear-gradient(0deg,transparent 0 8%,#fff 8.3% 9%,transparent 9.4% 17%);opacity:.8;filter:drop-shadow(0 0 8px #ff1a1a);animation:hyperspeed-lights 1s linear infinite}
+.hyperspeed-lights-left{left:-6%;transform:skewY(28deg) rotateZ(-3deg)}.hyperspeed-lights-right{right:-6%;transform:skewY(-28deg) rotateZ(3deg)}
+.hyperspeed-lights i{display:block;height:2px;background:#fff;margin:12% 0;box-shadow:0 0 10px 2px #ff3030}
+@keyframes hyperspeed-road{from{background-position:0 0}to{background-position:0 180px}}
+@keyframes hyperspeed-lights{from{background-position:0 0}to{background-position:0 260px}}
+@keyframes hyperspeed-drift{from{transform:translateY(-40px)}to{transform:translateY(120px)}}
+@media(prefers-reduced-motion:reduce){.hyperspeed-road,.hyperspeed-lights,.hyperspeed-stars{animation:none}}
