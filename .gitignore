@@ -6,3 +6,5 @@ data/*.db-shm
 data/uploads/*
 !data/uploads/.gitkeep
 .env
+.vercel
+.env*
